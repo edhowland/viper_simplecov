@@ -9,4 +9,7 @@ else
 end
 
 $LOAD_PATH.unshift viper_lib
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
 require 'viper'
+require 'viper_simplecov'
