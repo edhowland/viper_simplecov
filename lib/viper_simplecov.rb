@@ -1,5 +1,9 @@
 # viper_simplecov.rb - Initialization for viper_simplecov Viper package
 
+require_relative 'tools/load_cov'
+require_relative 'tools/cov'
+require_relative 'tools/cov_report'
+
 # Install the load_cov, cov and cov_report commands:
 Viper::Session[:commands][:load_cov] = ->(_b, *args) { load_cov args[0]; say "Coverage repor #{args[0]} loaded" } 
 Viper::Session[:commands][:cov] = ->(b, *_args) { sc = ScratchBuffer.new; sc.name = "Coverage report for #{b.name}"; cov(sc, b.name); $buffer_ring.unshift sc; sc.beg; say sc.name; say sc.line }
