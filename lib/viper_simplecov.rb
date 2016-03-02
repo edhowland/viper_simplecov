@@ -1,5 +1,7 @@
 # viper_simplecov.rb - Initialization for viper_simplecov Viper package
 
+require_relative 'viper_simplecov/version'
+
 require_relative 'tools/load_cov'
 require_relative 'tools/cov'
 require_relative 'tools/cov_report'
