@@ -19,9 +19,9 @@ require_relative 'spec_helper'
   describe 'cov with prior loaded coverage.json' do
     before { load_cov SRC_ROOT + '/coverage/coverage.json' }
     let(:buf) { ScratchBuffer.new }
-    subject { cov buf, SRC_ROOT + '/lib/associations/association.rb' }
+    subject { cov buf, SRC_ROOT + '/lib/tools/cov.rb' }
 
-    specify {skip;  subject }
+    specify { subject }
   end
 
   describe 'cov with unknown file raises FileNotReportedInCoverage' do
