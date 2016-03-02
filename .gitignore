@@ -1,0 +1,2 @@
+# ignore spec/viper_bin_path.rb should generate this from viper --bin-path-rb
+/spec/viper_bin_path.rb

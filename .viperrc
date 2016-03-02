@@ -1,0 +1,3 @@
+# setup package, coverage report for this source
+package viper_simplecov
+load_cov coverage/coverage.json
