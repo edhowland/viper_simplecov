@@ -1,10 +1,7 @@
 # viper_simplecov.rb - Initialization for viper_simplecov Viper package
 
 require_relative 'viper_simplecov/version'
-
-require_relative 'tools/load_cov'
-require_relative 'tools/cov'
-require_relative 'tools/cov_report'
+require_relative 'tools'
 
 # Install the load_cov, cov and cov_report commands:
 Viper::Session[:commands][:load_cov] = ->(_b, *args) { load_cov args[0]; say "Coverage repor #{args[0]} loaded" } 
