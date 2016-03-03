@@ -2,7 +2,7 @@
 
 Viper package for simplecov Ruby support.
 
-## Version 0.1.0
+## Version 0.2.0
 
 ## Abstract
 
@@ -11,6 +11,22 @@ Adds support for the SimpleCov Ruby gem to the Viper Programmer's Editor. [Viper
 This package only adds commands and parsing for simplecov-json files. It does not actually run the simplecov program on
 your source files. You must do that separately. Once you generate a coverage report in JSON format, you can
 load it into the Viper editor and browse the report.
+
+## Installation
+
+Install this package in your packages directory for your Viper runtime: ~/.viper/packages:
+
+```
+cd ~/.viper/packages
+git clone https://github.com/edhowland/viper_simplecov.git
+```
+
+### System Requirements
+
+This package, like all Viper packages, requires Viper version 1.1 or greater. If this is not the version in the viper master
+branch, switch to feature/1.1.0 before installing Viper.
+
+
 
 ## Adding this package to Viper runtime
 
@@ -53,6 +69,19 @@ to increase the coverage for that line and further line numbers.
 Continue this iteration until you get to a total of 100.0% coverage. 
 
 Good Luck!
+
+
+### The cov_file command
+
+If you are in the coverage report buffer, you can move the cursor to a line that has a file you are insterested in.
+If you run the command: cov_file, that file will be loaded into a new buffer and the command cov will be run. (See above)
+
+
+### Use the Control N key press to run the cov_file command.
+
+To make things easier, you can use the key chord: Control N to automatically run the cov_file command.
+You must be on a line with the following pattern:
+
 
 
 ## Running specs
