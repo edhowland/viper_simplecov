@@ -7,3 +7,7 @@ def path_subtract full_p, rel_p
   './' + diff_a.join('/')
 end
 
+
+def relative_to_here path
+  path_subtract path, ENV['PWD']
+end
