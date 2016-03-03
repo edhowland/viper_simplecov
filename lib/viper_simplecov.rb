@@ -8,3 +8,6 @@ Viper::Session[:commands][:load_cov] = ->(_b, *args) { load_cov args[0]; say "Co
 Viper::Session[:commands][:cov] = ->(b, *_args) { sc = ScratchBuffer.new; sc.name = "Coverage report for #{b.name}"; cov(sc, b.name); $buffer_ring.unshift sc; sc.beg; say sc.name; say sc.line }
 Viper::Session[:commands][:cov_report] = ->(_b, *_args) { cov_report; say $buffer_ring[0].name.to_s }
 Viper::Session[:commands][:cov_file] = ->(b, *args) { cov_file b }
+
+# bind ctrl_n to cov_file command
+Viper::Session[:key_bindings][:ctrl_n] = ->(b) { :cmd_cov_file }
